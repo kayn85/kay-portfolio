@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* vi kan byta färgtema direkt här istället ändra en och en i css */
+:root
+{
+  --body: rgb(250, 250, 250);
+  --white: rgb(255, 255, 255);
+  --first: rgb(56, 32, 177);
+  --first-hover: rgb(40, 91, 212);
+  --first-shadow: rgba(0, 0, 0, 0.1);
+  --second: rgb(0, 201, 255);
+  --third: rgb(192, 166, 49);
+  --text-second: rgb(68, 68, 68);
+  --text-third: rgb(56, 32, 177);
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* base styling */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body
+{
+  min-height: 100vh;
+  background-color: var(--body);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container
+{
+  width: 100%;
+  position: relative;
+}
+
+.wrapper
+{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: min(800px, 90%);
+}
+
+.section
+{
+  padding-block: 5em;
+}
+
+.row
+{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.col
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#kompetens
+{
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#om
+{
+  width: 40%;
+  min-width: 400px;
+  margin: auto;
+}
+
+#kontakt
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+}
+
+/* Meny bar styling */
+nav
+{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  line-height: 90px;
+  background: var(--body);
+  padding-inline: 9vw;
+  transition: .3s;
+  z-index: 100;
+}
+
+.nav-logo
+{
+  position: relative;
+}
+
+.nav-bar
+{
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-third);
+  text-decoration: none;
+}
+
+.nav-logo span
+{
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  font-size: 5em;
+  color: var(--text-second);
+}
+
+.nav-meny .nav-meny-list
+{
+  display: flex;
+}
+
+.nav-meny .nav-list
+{
+  list-style: none;
+  position: relative;
+}
+
+.nav-link
+{
+  text-decoration: none;
+  color: var(--text-second);
+  font-weight: 500;
+  padding-inline: 15px;
+  margin-inline: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-meny-btn
+{
+  display: none;
+}
+
+.nav-meny-btn i
+{
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* header, rubriker och linjerbrytning styling */
+.top-header
+{
+  text-align: center;
+  margin-top: 3em;
+}
+
+.top-header h1
+{
+  font-weight: 600;
+  color: var(--text-second);
+  margin-bottom: 10px;
+}
+
+.top-header span
+{
+  color: var(--text-second);
+}
+
+h2
+{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-second);
+  margin-bottom: 15px;
+}
+
+.line-b
+{
+  display: block;
+  margin-top: 20px;
+}
+
+/* knapp styling */
+.btn
+{
+  background: var(--text-third);
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: .5s;
+  color: var(--white)
+}
+
+.btn>i
+{
+  margin-left: 5px;
+}
+
+.btn:hover
+{
+  background: var(--second);
+  color: var(--white);
+}
+
+/* ikon styling */
+.social-ikon
+{
+  display: flex;
+  gap: 30px;
+}
+
+.ikon:hover
+{
+  background: var(--second);
+  color: var(--white);
+}
+
+.ikon:hover a>i
+{
+  background: var(--second);
+  color: var(--white);
+}
+
+.foten-ikon
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.foten-ikon:hover
+{
+  background: var(--second);
+}
+
+.ikon
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  margin-top: 2em;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Egenskaper styling */
+.egenskaper-box
+{
+  position: relative;
+  display: flex;
+  gap: 80px;
+}
+
+.egenskaper-text
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 60vh;
+  flex-direction: column;
+}
+
+.egenskaper-text-kort span
+{
+  background: var(--third);
+  color: #ffffff;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.egenskaper-namn h2
+{
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--text-second);
+  margin-block: 20px;
+  line-height: 1;
+}
+
+.type-text
+{
+  text-transform: capitalize;
+  color: var(--text-third)
+}
+
+.egenskaper-text-info
+{
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: var(--text-second);
+  max-width: 450px;
+}
+
+/* hämta cv på index sidan knapp hover 2 elementer samtidigt */
+.egenskaper-text-btn
+{
+  display: flex;
+  gap: 20px;
+}
+
+.egenskaper-text-btn>.blue-btn
+{
+  background: var(--first);
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 20px;
+}
+
+.egenskaper-text-btn>.blue-btn:hover
+{
+  background: var(--first-hover);
+}
+
+/* profil bild på första sidan */
+.egenskaper-img
+{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.image img
+{
+  width: 380px;
+  object-fit: cover;
+}
+
+.image
+{
+  margin: auto;
+  width: 380px;
+  height: 380px;
+  border-radius: 55% 45%;
+  overflow: hidden;
+  border: solid 5px var(--white);
+}
+
+/* Om styling */
+.om-info
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-block: 30px 30px;
+  padding-inline: 20px;
+  background: var(--white);
+  border-radius: 20px;
+}
+
+.om-info p
+{
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+}
+
+.om-info h2
+{
+  color: var(--text-second);
+}
+
+/* Hämta cv knappen på om sidan */
+.om-btn button
+{
+  margin-top: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: var(--text-third);
+  color: var(--white);
+}
+
+.om-btn button:hover
+{
+  background: var(--second);
+  color: var(--white);
+}
+
+/* Kompetens styling */
+.kompetens-box
+{
+  margin: 10px;
+}
+
+.kompetens-header
+{
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kompetens-list
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.kompetens-list span
+{
+  font-size: 14px;
+  background: var(--first);
+  color: var(--white);
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+
+/* Kontakt styling */
+.kontakt-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+.kontakt-left
+{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 20px;
+}
+
+.kontakt-input
+{
+  width: 80%;
+  height: 50px;
+  padding-left: 25px;
+  font-weight: 500;
+  color: var(--text-second);
+  border-radius: 10px;
+  margin: auto;
+  outline: none;
+  border: solid 1px var(--text-second);
+}
+
+.kontakt-left textarea
+{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 10px;
+  resize: none;
+}
+
+.kontakt-input::placeholder
+{
+  color: var(--text-second);
+}
+
+.kontakt-btn
+{
+  display: flex;
+  right: 20px;
+  bottom: 20px;
+  background: var(--first);
+  border-radius: 10px;
+  color: var(--white);
+  margin-right: 30px;
+}
+
+.kontakt-btn>.btn
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--first);
+  color: var(--whitewhite);
+}
+
+.kontakt-btn>.btn:hover
+{
+  background: var(--second);
+}
+
+/* foten styling */
+footer
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  background: #F8F8F8;
+  padding-block: 40px 60px;
+}
+
+.foten-top p
+{
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.foten-mitten .foten-meny
+{
+  display: flex;
+  gap: 30px;
+}
+
+.foten-list
+{
+  list-style: none;
+}
+
+.foten-list a
+{
+  text-decoration: none;
+  color: var(--text-second);
+  font-weight: 500;
+  margin-inline: 10px;
+}
+
+.foten-list>a:hover
+{
+  background: var(--second-color);
+  color: var(--color-white);
+}
+
+.foten-social>.ikon
+{
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.foten-social
+{
+  display: flex;
+  gap: 30px;
+}
+
+.foten-copyright
+{
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* @Media query 980px resposive */
+@media only screen and (max-width: 980px)
+{
+  .nav-btn
+  {
+    display: none;
+  }
+
+  .nav-meny.responsive
+  {
+    left: 0;
+  }
+
+  .nav-meny
+  {
+    position: fixed;
+    top: 80px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height: 90vh;
+    min-height: 450px;
+    transition: .3s;
+    left: -100%;
+  }
+
+  .nav-meny-list
+  {
+    flex-direction: column;
+  }
+
+  .nav-meny-btn
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .egenskaper-box
+  {
+    flex-direction: column;
+    gap: 0;
+    padding-top: 30px;
+  }
+
+  .egenskaper-text
+  {
+    order: 2;
+    min-height: 60vh;
+    margin: auto;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .egenskaper-namn
+  {
+    text-align: center;
+  }
+
+  .egenskaper-img
+  {
+    order: 1;
+    justify-content: center;
+    min-height: 120px;
+    width: 100%;
+  }
+
+  .image img
+  {
+    width: 380px;
+
+    object-fit: cover;
+  }
+
+  .row
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #om
+  {
+    min-width: 350px;
+  }
+
+  nav
+  {
+    position: relative;
+  }
+
+  .top-header
+  {
+    margin-top: 0;
+  }
+
+  .foten-mitten .foten-meny
+  {
+    gap: 5px;
+  }
+
+  .egenskaper-text-info
+  {
+    text-align: center;
+  }
+}
+
+/* @Media query 360px resposive */
+@media only screen and (max-width: 360px)
+{
+  .foten-meny
+  {
+    margin: auto;
+  }
+
+  .foten-copyright
+  {
+    text-align: center;
+  }
+
+  #om
+  {
+    min-width: 300px;
+  }
+
+  .kontakt-btn
+  {
+    margin-right: 35px
+  }
+
+  .kompetens-box
+  {
+    margin: 2px;
+    padding: 5px
+  }
+
+  .kompetens-list
+  {
+    padding: 5px;
+  }
+
+  .col
+  {
+    flex-direction: column;
+  }
+
+  #kompetens
+  {
+    width: 90%
+  }
+
+  .foten-mitten .foten-meny
+  {
+    gap: 15px;
+  }
+}
