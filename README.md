@@ -8,3 +8,5 @@ Jag har byggt sidan med:
 2. om mig, kompetens och kontakt sidan finns.
 3. lite javascript.
 
+DEMO: https://kayn-portfolio.netlify.app/
+
